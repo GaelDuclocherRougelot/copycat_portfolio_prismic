@@ -2,6 +2,7 @@ import About from "./_components/About";
 import Header from "./_components/Header";
 import Hero from "./_components/Hero";
 import { createClient } from "@/prismicio";
+import ImageGrid from "./_components/ImageGrid";
 
 export default async function Home() {
   const client = createClient();
@@ -14,6 +15,7 @@ export default async function Home() {
       <Hero images={images}/>
       <main className="flex min-h-screen flex-col items-center justify-between">
         <About />
+        <ImageGrid images={images}/>
       </main>
     </>
   );
