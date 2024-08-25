@@ -24,8 +24,8 @@ export default function ImageCarousel({
       {images.length > 0 ? (
         images.map((img) => (
           <Image
-            src={img.image.url}
-            key={img.image.id}
+            src={img.image.url ?? "1.jpg"}
+            key={img.image?.id ?? `fallback-${Math.random()}`}
             quality={100}
             width={4000}
             height={4000}
