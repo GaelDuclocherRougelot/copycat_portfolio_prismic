@@ -5,7 +5,7 @@ import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 
 const averia_serif_libre = Averia_Serif_Libre({subsets: ["latin"], weight: ["300"], variable: "--font-primary" });
-const nunito = Nunito({subsets: ["latin"], weight: ["200"], variable: "--font-caption" });
+const nunito = Nunito({subsets: ["latin"], weight: ["200", "300", "400", "500"], variable: "--font-caption" });
 
 
 export const metadata: Metadata = {
