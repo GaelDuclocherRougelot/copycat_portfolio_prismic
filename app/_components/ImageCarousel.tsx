@@ -35,9 +35,30 @@ export default function ImageCarousel({
         ))
       ) : (
         <>
-          <img src="1.jpg" alt="" className="h-full w-full object-cover" />
-          <img src="2.jpg" alt="" className="h-full w-full object-cover" />
-          <img src="3.jpg" alt="" className="h-full w-full object-cover" />
+          <Image
+            src="1.jpg"
+            quality={100}
+            width={4000}
+            height={4000}
+            alt=""
+            className="h-full w-full object-cover"
+          />
+          <Image
+            src="2.jpg"
+            quality={100}
+            width={4000}
+            height={4000}
+            alt=""
+            className="h-full w-full object-cover"
+          />
+          <Image
+            src="3.jpg"
+            quality={100}
+            width={4000}
+            height={4000}
+            alt=""
+            className="h-full w-full object-cover"
+          />
         </>
       )}
     </Slider>
