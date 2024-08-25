@@ -21,7 +21,7 @@ export default function Header() {
         <Link href="">
           Associate <br />
           <span className="text-xs italic tracking-wider">
-            Anje's Portfolio
+            Anje &apos;s Portfolio
           </span>
         </Link>
         <Link href="">
