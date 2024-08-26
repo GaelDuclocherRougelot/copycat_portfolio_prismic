@@ -8,7 +8,7 @@ export default function About() {
         <div className="flex flex-col items-center gap-10">
           <div className="flex flex-col gap-[18px] items-center">
             <Image src="/map-icon.jpg" width={80} height={80} alt="map-icon" />
-            <h3 className="text-[2.40rem] tracking-[0.5rem]">Hi, I'm Benj.</h3>
+            <h3 className="text-[2.40rem] tracking-[0.5rem]">Hi, I&apos;m Benj.</h3>
           </div>
 
           <div className="text-[0.950rem] font-light font-caption tracking-[0.2rem] flex flex-col gap-3 p-8 w-full md:w-[460px]">
@@ -18,13 +18,13 @@ export default function About() {
             </div>
 
             <p>
-              I’d love to help create your visual history through the moments
-              we’ll share at your wedding. I’m actually more interested in what
-              you’ll think of your photos 20+ years from now than when you first
+              I&apos;d love to help create your visual history through the moments
+              we&apos;ll share at your wedding. I&apos;m actually more interested in what
+              you&apos;ll think of your photos 20+ years from now than when you first
               receive them. Those are the moments and relationships that mean
               something to me.
             </p>
-            <p>Marriage is an adventure. Let’s explore.</p>
+            <p>Marriage is an adventure. Let&apos;s explore.</p>
             <div className="flex flex-col gap-2">
               <Link href="#" className="underline font-semibold tracking-wider">
                 Read More About Benj
