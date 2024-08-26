@@ -27,8 +27,8 @@ export default function ImageCarousel({
             src={img.image.url ?? "1.jpg"}
             key={img.image?.id ?? `fallback-${Math.random()}`}
             quality={100}
-            width={4000}
-            height={4000}
+            width={2260}
+            height={1440}
             alt=""
             className="h-full w-full object-cover"
           />

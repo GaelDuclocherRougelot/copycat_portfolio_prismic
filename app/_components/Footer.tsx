@@ -55,7 +55,7 @@ export default function Footer() {
           </form>
         </div>
       </div>
-      <div className="flex flex-col justify-center items-center gap-6 py-10 md:p-[50px]">
+      <div className="flex flex-col justify-center items-center gap-6 py-10 md:p-[70px]">
         <p className="text-grayCaption tracking-[0.2rem]">
           © 2024 Benj Haisch
         </p>
