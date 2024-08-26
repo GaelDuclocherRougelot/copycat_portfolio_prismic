@@ -3,7 +3,7 @@ import Link from "next/link";
 
 export default function About() {
   return (
-    <section className="w-full lg:w-screen lg:h-screen flex items-center justify-center py-16">
+    <section id="about" className="w-full lg:w-screen lg:h-screen flex items-center justify-center py-16">
       <div className="max-w-[969px] flex flex-col-reverse lg:flex-row items-center justify-center text-grayCaption gap-16">
         <div className="flex flex-col items-center gap-10">
           <div className="flex flex-col gap-[18px] items-center">

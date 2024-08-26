@@ -4,9 +4,16 @@ import "./globals.css";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 
-const averia_serif_libre = Averia_Serif_Libre({subsets: ["latin"], weight: ["300"], variable: "--font-primary" });
-const nunito = Nunito({subsets: ["latin"], weight: ["200", "300", "400", "500"], variable: "--font-caption" });
-
+const averia_serif_libre = Averia_Serif_Libre({
+  subsets: ["latin"],
+  weight: ["300"],
+  variable: "--font-primary",
+});
+const nunito = Nunito({
+  subsets: ["latin"],
+  weight: ["200", "300", "400", "500"],
+  variable: "--font-caption",
+});
 
 export const metadata: Metadata = {
   title: "Create Next App",
@@ -19,8 +26,12 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en">
-      <body className={`${nunito.variable} ${averia_serif_libre.variable} font-primary`}>{children}</body>
+    <html lang="en" className="scroll-smooth">
+      <body
+        className={`${nunito.variable} ${averia_serif_libre.variable} font-primary`}
+      >
+        {children}
+      </body>
     </html>
   );
 }

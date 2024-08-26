@@ -14,7 +14,7 @@ export default function Hero({images}: {images: GroupField<Simplify<HomeDocument
         alt="logo"
         className="hidden md:block absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 z-50 filter invert opacity-80 select-none"
       />
-      <Link href={""} className="absolute text-nowrap bottom-16 left-1/2 transform -translate-x-1/2 -translate-y-1/2 z-50 text-white text-[1rem] tracking-[0.2rem] uppercase">
+      <Link href={"#about"} className="absolute text-nowrap bottom-16 left-1/2 transform -translate-x-1/2 -translate-y-1/2 z-50 text-white text-[1rem] tracking-[0.2rem] uppercase">
         Scroll down for more
       </Link>
       <ImageCarousel images={images}/>
