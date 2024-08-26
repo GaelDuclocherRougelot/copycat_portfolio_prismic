@@ -1,5 +1,7 @@
+"use client"
 import { HomeDocumentDataImageGalleryItem, Simplify } from "@/prismicio-types";
 import { GroupField } from "@prismicio/client";
+import { motion } from "framer-motion";
 import Image from "next/image";
 
 export default function ImageGrid({
@@ -10,8 +12,15 @@ export default function ImageGrid({
   return (
     <section className="w-full h-full flex items-center justify-center p-8 md:p-16 max-w-[1420px]">
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 w-full">
-        {images.map((img) => (
-          <div className="relative group" key={img.image.id}>
+        {images.map((img, index) => (
+          <motion.div
+            initial={{ opacity: 0, y: 100 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8, delay: 0.1 * index, ease: "easeOut" }}
+            viewport={{ once: true }}
+            className="relative group"
+            key={img.image.id}
+          >
             <Image
               src={img.image.url ?? "1.jpg"}
               alt="picture"
@@ -53,7 +62,7 @@ export default function ImageGrid({
                 READ MORE
               </button>
             </div>
-          </div>
+          </motion.div>
         ))}
       </div>
     </section>

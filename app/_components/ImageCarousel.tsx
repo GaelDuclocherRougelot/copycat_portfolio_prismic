@@ -38,24 +38,24 @@ export default function ImageCarousel({
           <Image
             src="1.jpg"
             quality={100}
-            width={4000}
-            height={4000}
+            width={2260}
+            height={1440}
             alt=""
             className="h-full w-full object-cover"
           />
           <Image
             src="2.jpg"
             quality={100}
-            width={4000}
-            height={4000}
+            width={2260}
+            height={1440}
             alt=""
             className="h-full w-full object-cover"
           />
           <Image
             src="3.jpg"
             quality={100}
-            width={4000}
-            height={4000}
+            width={2260}
+            height={1440}
             alt=""
             className="h-full w-full object-cover"
           />

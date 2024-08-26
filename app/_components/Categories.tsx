@@ -2,6 +2,7 @@
 
 import { HomeDocumentDataCategoriesItem, Simplify } from "@/prismicio-types";
 import { GroupField, KeyTextField } from "@prismicio/client";
+import { motion } from "framer-motion";
 import Image from "next/image";
 import { useState } from "react";
 
@@ -22,7 +23,13 @@ export default function Categories({
 
   return (
     <section className="flex gap-4 items-center justify-center max-w-[1420px] w-full h-full px-8 md:p-16">
-      <div className="flex flex-col gap-20 md:gap-28 flex-1 text-grayCaption w-full">
+      <motion.div
+        initial={{ opacity: 0, y: 100 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        transition={{ duration: 0.8 }}
+        viewport={{ once: true }}
+        className="flex flex-col gap-20 md:gap-28 flex-1 text-grayCaption w-full"
+      >
         <h3 className="text-center lg:w-36 text-3xl tracking-[0.5rem]">
           Browse Categories
         </h3>
@@ -46,8 +53,14 @@ export default function Categories({
               </li>
             ))}
         </ul>
-      </div>
-      <div className="hidden lg:flex flex-[2]">
+      </motion.div>
+      <motion.div
+        initial={{ opacity: 0, y: 100 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        transition={{ duration: 0.8, delay: 0.2 }}
+        viewport={{ once: true }}
+        className="hidden lg:flex flex-[2]"
+      >
         <Image
           src={currentCategory.image_url ?? "/1.jpg"}
           alt="landscape"
@@ -56,7 +69,7 @@ export default function Categories({
           height={1080}
           className="aspect-video object-cover"
         />
-      </div>
+      </motion.div>
     </section>
   );
 }
