@@ -8,6 +8,9 @@ const config: Config = {
   ],
   theme: {
     extend: {
+      textColor: {
+        grayCaption: "var(--caption-grey)"
+      },
       fontFamily: {
         primary: ["var(--font-primary)"],
         caption: ["var(--font-caption)"],

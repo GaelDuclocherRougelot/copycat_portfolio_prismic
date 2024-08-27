@@ -1,5 +1,6 @@
 import Image from "next/image";
 import Link from "next/link";
+import { CiSearch } from "react-icons/ci";
 import BurgerMenu from "./BurgerMenu";
 
 export default function Header() {
@@ -21,7 +22,7 @@ export default function Header() {
         <Link href="">
           Associate <br />
           <span className="text-xs italic tracking-wider">
-            Anje &apos;s Portfolio
+            Anje&apos;s Portfolio
           </span>
         </Link>
         <Link href="">
@@ -43,7 +44,7 @@ export default function Header() {
         alt="logo"
         className="md:hidden filter invert opacity-80"
       />
-      <i>O</i>
+      <CiSearch className="md:hidden" color="white" />
     </header>
   );
 }

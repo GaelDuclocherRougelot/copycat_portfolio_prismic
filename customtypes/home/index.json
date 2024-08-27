@@ -23,6 +23,30 @@
           }
         }
       },
+      "categories": {
+        "type": "Group",
+        "config": {
+          "label": "categories",
+          "repeat": true,
+          "fields": {
+            "category_name": {
+              "type": "Text",
+              "config": {
+                "label": "category_name",
+                "placeholder": ""
+              }
+            },
+            "category_image": {
+              "type": "Image",
+              "config": {
+                "label": "category_image",
+                "constraint": {},
+                "thumbnails": []
+              }
+            }
+          }
+        }
+      },
       "slices": {
         "type": "Slices",
         "fieldset": "Slice Zone",
