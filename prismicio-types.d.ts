@@ -19,6 +19,31 @@ export interface HomeDocumentDataImageGalleryItem {
   image: prismic.ImageField<never>;
 }
 
+/**
+ * Item in *home → categories*
+ */
+export interface HomeDocumentDataCategoriesItem {
+  /**
+   * category_name field in *home → categories*
+   *
+   * - **Field Type**: Text
+   * - **Placeholder**: *None*
+   * - **API ID Path**: home.categories[].category_name
+   * - **Documentation**: https://prismic.io/docs/field#key-text
+   */
+  category_name: prismic.KeyTextField;
+
+  /**
+   * category_image field in *home → categories*
+   *
+   * - **Field Type**: Image
+   * - **Placeholder**: *None*
+   * - **API ID Path**: home.categories[].category_image
+   * - **Documentation**: https://prismic.io/docs/field#image
+   */
+  category_image: prismic.ImageField<never>;
+}
+
 type HomeDocumentDataSlicesSlice = never;
 
 /**
@@ -35,6 +60,17 @@ interface HomeDocumentData {
    * - **Documentation**: https://prismic.io/docs/field#group
    */
   image_gallery: prismic.GroupField<Simplify<HomeDocumentDataImageGalleryItem>>;
+
+  /**
+   * categories field in *home*
+   *
+   * - **Field Type**: Group
+   * - **Placeholder**: *None*
+   * - **API ID Path**: home.categories[]
+   * - **Tab**: Main
+   * - **Documentation**: https://prismic.io/docs/field#group
+   */
+  categories: prismic.GroupField<Simplify<HomeDocumentDataCategoriesItem>>;
 
   /**
    * Slice Zone field in *home*
@@ -106,6 +142,7 @@ declare module "@prismicio/client" {
       HomeDocument,
       HomeDocumentData,
       HomeDocumentDataImageGalleryItem,
+      HomeDocumentDataCategoriesItem,
       HomeDocumentDataSlicesSlice,
       AllDocumentTypes,
     };
