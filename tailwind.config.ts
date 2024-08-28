@@ -9,7 +9,7 @@ const config: Config = {
   theme: {
     extend: {
       textColor: {
-        grayCaption: "var(--caption-grey)"
+        grayCaption: "var(--caption-grey)",
       },
       fontFamily: {
         primary: ["var(--font-primary)"],
@@ -19,6 +19,22 @@ const config: Config = {
         "gradient-radial": "radial-gradient(var(--tw-gradient-stops))",
         "gradient-conic":
           "conic-gradient(from 180deg at 50% 50%, var(--tw-gradient-stops))",
+      },
+      keyframes: {
+        "slide-down": {
+          "0%": { transform: "translateY(-150%)" },
+          "100%": { transform: "translateY(100%)" },
+        },
+        "slide-down-infinite": {
+          "0%": { transform: "translateY(-50%)", opacity: "0" },
+          "50%": { transform: "translateY(50%)", opacity: "1" },
+          "100%": { transform: "translateY(100%)", opacity: "0" },
+        },
+      },
+      animation: {
+        "slide-down": "slide-down 0.5s linear",
+        "slide-down-infinite": "slide-down-infinite 3s linear infinite",
+
       },
     },
   },

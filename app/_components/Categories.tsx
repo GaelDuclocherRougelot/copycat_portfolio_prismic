@@ -43,7 +43,7 @@ export default function Categories({
                     image_url: category.category_image.url,
                   })
                 }
-                className="flex gap-10 cursor-pointer group"
+                className="flex gap-10 cursor-pointer group text-[1.2rem]"
                 key={index}
               >
                 <span>0{index + 1}.</span>{" "}
