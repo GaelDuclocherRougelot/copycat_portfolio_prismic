@@ -3,6 +3,7 @@ import { motion } from "framer-motion";
 import Image from "next/image";
 import Link from "next/link";
 import { AiFillInstagram } from "react-icons/ai";
+import { BsChevronRight } from "react-icons/bs";
 import { FaPinterestP } from "react-icons/fa";
 import { PiArrowUpThin } from "react-icons/pi";
 import { TfiYoutube } from "react-icons/tfi";
@@ -61,15 +62,20 @@ export default function Footer() {
             giveaways, presets, videos, etc.
           </p>
           <form className="mt-10 w-full mb-9">
-            <input
-              type="email"
-              className="border py-4 px-5 text-sm italic w-full"
-              placeholder="Email address"
-            />
+            <div className="flex">
+              <input
+                type="email"
+                className="border border-r-0 py-4 px-5 text-sm italic w-full tracking-[0.2rem] text-gray-500 placeholder:text-gray-500"
+                placeholder="Email address"
+              />
+              <button className="py-4 px-5 border border-l-0 bg-gray-200">
+                <BsChevronRight size={11} />
+              </button>
+            </div>
           </form>
         </div>
       </div>
-      <div className="flex flex-col justify-center items-center gap-6 pt-24 pb-24">
+      <div className="flex flex-col justify-center items-center gap-8 pt-24 pb-24">
         <Image
           src="/flothemes-logo.png"
           alt="flothemes icon"
