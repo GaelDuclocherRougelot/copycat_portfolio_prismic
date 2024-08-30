@@ -16,6 +16,7 @@ export default function Dropdown({ links }: { links: Array<string> }) {
         {links &&
           links.map((link, index) => (
             <Link
+              key={index}
               href={link.toLowerCase()}
               className="text-grayCaption text-nowrap text-sm md:text-[1vw]"
             >
