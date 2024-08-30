@@ -7,24 +7,30 @@ export default function About() {
   return (
     <section
       id="about"
-      className="w-full lg:w-screen lg:h-screen flex items-center justify-center py-16"
+      className="w-screen lg:h-screen flex items-center justify-center py-16"
     >
       <motion.div
         initial={{ opacity: 0, y: 100 }}
         whileInView={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.8 }}
         viewport={{ once: true }}
-        className="max-w-[969px] flex flex-col-reverse lg:flex-row items-center justify-center text-grayCaption gap-16"
+        className="flex flex-col-reverse md:flex-row items-center lg:max-h-[35vw] justify-center text-grayCaption w-full lg:max-w-[60vw] gap-10 lg:gap-0"
       >
-        <div className="flex flex-col items-center gap-10">
-          <div className="flex flex-col gap-[18px] items-center">
-            <Image src="/map-icon.jpg" width={80} height={80} alt="map-icon" />
-            <h3 className="text-[2.40rem] tracking-[0.5rem]">
+        <div className="flex flex-col justify-between items-center h-full w-full lg:min-w-[300px] lg:w-[40vw]">
+          <div className="flex flex-col gap-[18px] items-center xl:mb-[0vw]">
+            <Image
+              src="/map-icon.jpg"
+              width={200}
+              height={200}
+              alt="map-icon"
+              className="w-[80px] md:w-[4.5vw]"
+            />
+            <h3 className="text-2xl md:text-[2.23vw] tracking-[0.7rem]">
               Hi, I&apos;m Benj.
             </h3>
           </div>
 
-          <div className="text-[0.950rem] font-light font-caption tracking-[0.2rem] flex flex-col gap-3 p-8 w-full md:w-[460px]">
+          <div className="text-sm md:text-[0.92vw] font-light font-caption tracking-[0.2rem] flex flex-col gap-3 p-8 w-full lg:leading-[1.6vw]">
             <div>
               <p>I think marriage is awesome.</p>
               <p>I love photography, weddings, and the outdoors.</p>
@@ -48,14 +54,14 @@ export default function About() {
             </div>
           </div>
         </div>
-        <div className="bg-[#fafafa] p-12 w-full">
+        <div className="bg-[#fafafa] p-6 lg:p-[3vw] lg:ml-[1.5vw] w-full lg:w-[40vw]">
           <Image
             src="/benj_photographer.jpg"
             alt="picture of photographer"
-            width={700}
-            height={900}
+            width={900}
+            height={1200}
             quality={100}
-            className="md:min-w-[400px]"
+            className="object-cover w-full lg:w-[50vw] h-full"
           />
         </div>
       </motion.div>

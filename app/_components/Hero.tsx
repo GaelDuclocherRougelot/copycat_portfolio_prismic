@@ -24,13 +24,12 @@ export default function Hero({
       />
       <Link
         href={"#about"}
-        className="flex flex-col items-center gap-4 absolute text-nowrap bottom-10 left-1/2 transform -translate-x-1/2 -translate-y-1/2 z-50 text-white text-[1rem] tracking-[0.2rem] uppercase"
+        className="hidden md:flex flex-col items-center gap-6 absolute text-nowrap bottom-4 left-1/2 transform -translate-x-1/2 -translate-y-1/2 z-50 text-white text-[0.92vw] tracking-[0.3rem] uppercase"
       >
         Scroll down for more
         <HiChevronDown
-          size={20}
+          size={"1vw"}
           color="white"
-
           className="animate-slide-down-infinite"
         />
       </Link>

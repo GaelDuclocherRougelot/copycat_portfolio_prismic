@@ -10,8 +10,8 @@ export default function ImageGrid({
   images: GroupField<Simplify<HomeDocumentDataImageGridItem>>;
 }) {
   return (
-    <section className="w-full h-full flex items-center justify-center p-8 md:p-16 max-w-[1420px]">
-      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 w-full">
+    <section className="w-full h-full flex items-center justify-center max-w-[85vw] md:max-w-[80vw]">
+      <div className="grid grid-cols-1 md:grid-cols-4 gap-6 w-full">
         {images.map((img, index) => (
           <motion.div
             initial={{ opacity: 0, y: 100 }}
@@ -28,7 +28,7 @@ export default function ImageGrid({
               height={900}
               quality={100}
               loading="lazy"
-              className="aspect-[3/4] object-cover w-full"
+              className="aspect-square md:aspect-[3/4] object-cover w-full"
             />
             <div className="absolute w-full h-full top-0 left-0 p-2">
               <div className="group-over w-full h-full flex flex-col items-center justify-center opacity-0 md:group-hover:opacity-100 bg-white transition-all duration-500 p-10 gap-6 cursor-pointer overflow-hidden">
@@ -39,11 +39,14 @@ export default function ImageGrid({
                     width={100}
                     height={100}
                     quality={100}
+                    className="md:w-[7vw]"
                   />
                 )}
 
-                <p className="text-center text-lg text-ellipsis">{img.title}</p>
-                <button className="text-white bg-[#6b6764] py-2 px-8 text-sm tracking-[0.2rem] border-none">
+                <p className="text-center text-lg md:text-[0.92vw] text-ellipsis">
+                  {img.title}
+                </p>
+                <button className="text-white bg-[#6b6764] py-2 px-8 text-lg md:text-[0.92vw] tracking-[0.2rem] border-none">
                   READ MORE
                 </button>
               </div>
@@ -59,8 +62,8 @@ export default function ImageGrid({
                 />
               )}
 
-              <p className="text-center text-lg text-ellipsis">{img.title}</p>
-              <button className="text-white bg-[#6b6764] py-2 px-8 text-sm tracking-[0.2rem] border-none">
+              <p className="text-center text-sm text-ellipsis">{img.title}</p>
+              <button className="text-white bg-[#6b6764] py-2 px-8 text-xs tracking-[0.2rem] border-none">
                 READ MORE
               </button>
             </div>

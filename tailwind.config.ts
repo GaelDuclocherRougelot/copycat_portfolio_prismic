@@ -15,6 +15,10 @@ const config: Config = {
         primary: ["var(--font-primary)"],
         caption: ["var(--font-caption)"],
       },
+      fontSize: {
+        'sm-responsive': 'clamp(1rem, 1rem, 2vw + 1.3rem)',
+        'lg-responsive': 'clamp(1.5rem, 3vw + 1rem, 2.5rem)',
+      },
       backgroundImage: {
         "gradient-radial": "radial-gradient(var(--tw-gradient-stops))",
         "gradient-conic":

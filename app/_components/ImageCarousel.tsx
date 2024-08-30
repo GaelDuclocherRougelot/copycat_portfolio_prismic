@@ -35,7 +35,7 @@ export default function ImageCarousel({
 
   return (
     <>
-      <div className="absolute right-20 bottom-10 z-50 text-white text-[1.80rem] flex items-center gap-2 overflow-hidden">
+      <div className="absolute transform left-1/2 -translate-x-1/2 md:left-auto md:translate-x-0 md:right-24 bottom-7 md:bottom-8 z-50 text-white text-[3.5vw] md:text-[1.9vw] flex items-center gap-2 overflow-hidden">
         <span
           className={`${
             animate ? "animate-slide-down" : ""
