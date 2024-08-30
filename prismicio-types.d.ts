@@ -44,6 +44,41 @@ export interface HomeDocumentDataCategoriesItem {
   category_image: prismic.ImageField<never>;
 }
 
+/**
+ * Item in *home → image_grid*
+ */
+export interface HomeDocumentDataImageGridItem {
+  /**
+   * title field in *home → image_grid*
+   *
+   * - **Field Type**: Text
+   * - **Placeholder**: *None*
+   * - **API ID Path**: home.image_grid[].title
+   * - **Documentation**: https://prismic.io/docs/field#key-text
+   */
+  title: prismic.KeyTextField;
+
+  /**
+   * icon field in *home → image_grid*
+   *
+   * - **Field Type**: Image
+   * - **Placeholder**: *None*
+   * - **API ID Path**: home.image_grid[].icon
+   * - **Documentation**: https://prismic.io/docs/field#image
+   */
+  icon: prismic.ImageField<never>;
+
+  /**
+   * image field in *home → image_grid*
+   *
+   * - **Field Type**: Image
+   * - **Placeholder**: *None*
+   * - **API ID Path**: home.image_grid[].image
+   * - **Documentation**: https://prismic.io/docs/field#image
+   */
+  image: prismic.ImageField<never>;
+}
+
 type HomeDocumentDataSlicesSlice = never;
 
 /**
@@ -71,6 +106,17 @@ interface HomeDocumentData {
    * - **Documentation**: https://prismic.io/docs/field#group
    */
   categories: prismic.GroupField<Simplify<HomeDocumentDataCategoriesItem>>;
+
+  /**
+   * image_grid field in *home*
+   *
+   * - **Field Type**: Group
+   * - **Placeholder**: *None*
+   * - **API ID Path**: home.image_grid[]
+   * - **Tab**: Main
+   * - **Documentation**: https://prismic.io/docs/field#group
+   */
+  image_grid: prismic.GroupField<Simplify<HomeDocumentDataImageGridItem>>;
 
   /**
    * Slice Zone field in *home*
@@ -143,6 +189,7 @@ declare module "@prismicio/client" {
       HomeDocumentData,
       HomeDocumentDataImageGalleryItem,
       HomeDocumentDataCategoriesItem,
+      HomeDocumentDataImageGridItem,
       HomeDocumentDataSlicesSlice,
       AllDocumentTypes,
     };
